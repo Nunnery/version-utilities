@@ -12,6 +12,8 @@
 
     <artifactId>version-utilities-api</artifactId>
 
+    <name>Version Utilities API</name>
+
     <dependencies>
         <dependency>
             <groupId>org.spigotmc</groupId>
