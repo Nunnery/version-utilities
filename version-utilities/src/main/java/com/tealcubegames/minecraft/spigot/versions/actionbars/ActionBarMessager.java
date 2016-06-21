@@ -28,23 +28,18 @@ import org.bukkit.Bukkit;
 
 public final class ActionBarMessager {
 
-    private static final String NMS_VERSION;
-
-    static {
-        String serverPackageName = Bukkit.getServer().getClass().getPackage().getName();
-        NMS_VERSION = serverPackageName.substring(serverPackageName.lastIndexOf("." + 1));
-    }
-
     private ActionBarMessager() {
         // do nothing
     }
 
     public static ActionBarMessage createActionBarMessage(String message) {
-        switch (NMS_VERSION) {
+        String serverPackageName = Bukkit.getServer().getClass().getPackage().getName();
+        String nmsVersion = serverPackageName.substring(serverPackageName.lastIndexOf("." + 1));
+        switch (nmsVersion) {
             case "v1_10_R1":
                 return new com.tealcubegames.minecraft.spigot.versions.v1_10_R1.actionbars.ActionBarMessageImpl(message);
             default:
-                throw new NotImplementedException(NMS_VERSION + " is not supported");
+                throw new NotImplementedException(nmsVersion + " is not supported");
         }
     }
 
