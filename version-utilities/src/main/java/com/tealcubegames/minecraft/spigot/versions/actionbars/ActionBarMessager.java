@@ -34,7 +34,7 @@ public final class ActionBarMessager {
 
     public static ActionBarMessage createActionBarMessage(String message) {
         String serverPackageName = Bukkit.getServer().getClass().getPackage().getName();
-        String nmsVersion = serverPackageName.substring(serverPackageName.lastIndexOf("." + 1));
+        String nmsVersion = serverPackageName.substring(serverPackageName.lastIndexOf(".") + 1);
         switch (nmsVersion) {
             case "v1_10_R1":
                 return new com.tealcubegames.minecraft.spigot.versions.v1_10_R1.actionbars.ActionBarMessageImpl(message);
