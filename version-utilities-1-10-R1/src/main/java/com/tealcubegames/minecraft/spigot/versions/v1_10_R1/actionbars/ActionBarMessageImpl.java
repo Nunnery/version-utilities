@@ -24,6 +24,7 @@ package com.tealcubegames.minecraft.spigot.versions.v1_10_R1.actionbars;
 
 import com.google.common.base.Objects;
 import com.google.common.base.Preconditions;
+import com.tealcubegames.minecraft.spigot.TextUtils;
 import com.tealcubegames.minecraft.spigot.versions.api.actionbars.ActionBarMessage;
 import net.minecraft.server.v1_10_R1.ChatComponentText;
 import net.minecraft.server.v1_10_R1.PacketPlayOutChat;
@@ -59,6 +60,11 @@ public class ActionBarMessageImpl implements ActionBarMessage {
 
     @Override
     public String getMessage() {
+        return TextUtils.color(getRawMessage());
+    }
+
+    @Override
+    public String getRawMessage() {
         return Objects.firstNonNull(message, "");
     }
 

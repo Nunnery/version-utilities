@@ -32,4 +32,6 @@ public interface ActionBarMessage {
 
     String getMessage();
 
+    String getRawMessage();
+
 }
