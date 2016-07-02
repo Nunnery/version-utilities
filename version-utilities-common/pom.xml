@@ -5,11 +5,11 @@
     <parent>
         <groupId>com.tealcubegames.minecraft.spigot</groupId>
         <artifactId>version-utilities-parent</artifactId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.0.1</version>
     </parent>
 
     <artifactId>version-utilities-common</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.1</version>
 
     <name>Version Utilities Common</name>
     <description>Version Utilities Common</description>
